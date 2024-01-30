@@ -4,15 +4,36 @@
 
     <!-- <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
     <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /> -->
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
 </head>
 <style>
     body { margin: 0; padding: 0; }
     html, body, #map { height: 100%; }
+    .map-overlay {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        position: absolute;
+        width: 200px;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .map-overlay .map-overlay-inner {
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
 </style>
 <body>
 
     <div id='map'></div>
-    hellp
+    <div class="map-overlay top">
+        <div class="map-overlay-inner">
+            Over all Metric 1
+        </div>
+        </div>
     <script>
       
 //         const bounds = [
