@@ -1,49 +1,214 @@
 <html>
 
 <head>
-
-    <!-- <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
-    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /> -->
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+  <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--   <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /> -->
+    
+  <script defer src="/public/bundle.js"></script>
 </head>
 <style>
-    body { margin: 0; padding: 0; }
-    html, body, #map { height: 100%; }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #map {
+    height: 100%;
+  }
+</style>
+
+<body>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body,
+    #map {
+      height: 100%;
+    }
+
+    
+
     .map-overlay {
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        position: absolute;
-        width: 200px;
-        top: 0;
-        left: 0;
-        padding: 10px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      width: 200px;
+      /* top: 0; */
+      /* left: 0; */
+      padding: 10px;
     }
 
     .map-overlay .map-overlay-inner {
-        background-color: #fff;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
-        padding: 10px;
-        margin-bottom: 10px;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      padding: 10px;
+      margin-bottom: 10px;
     }
-</style>
-<body>
+    .map-container{
+      display: flex;
+      top: 0;
+      left: 0;
+      position: absolute;
+      flex-wrap: wrap;
+    justify-content: center;
+    width:100%
+    }
 
-    <div id='map'></div>
-    <div class="map-overlay top">
-        <div class="map-overlay-inner">
-            Over all Metric 1
-        </div>
-        </div>
-    <script>
-      
-//         const bounds = [
-// [-74.04728, 40.68392], // [west, south]
-// [-73.91058, 40.87764]  // [east, north]
-// ];
-// // Set the map's max bounds.
-// map.setMaxBounds(bounds);
-    </script>
-    <script src="/bundle.js"/>
+    .map-container1{
+      top: 0;
+      left: 0;
+      width: 320px;
+      height:90vh;
+      position: absolute;
+      padding: 10px;
+      background-color: #fff;
+      margin: 15px;
+      border-radius: 25px;
+      display: none;
+    }
+    .filter{
+      position: absolute;
+      display: none;
+      top: 10;
+      left: 350;
+
+    }
+  </style>
+
+
+
+
+  <div id='map'></div>
+  <div class="map-container" id="map-container">
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      Over all Metric 100
+    </div>
+  </div>
+</div>
+
+ <div class="map-container1" id="map-container1" >
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Region label</li>
+      <li class="breadcrumb-item active" aria-current="page">Location</li>
+    </ol>
+  </nav>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Capacity</h5>
+      <h6 class="card-subtitle mb-2 text-muted">subtitle</h6>
+      <p class="card-text">Some quick desc text</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Metric 1</li>
+        <li class="list-group-item">Metric 2</li>
+        <li class="list-group-item">Metric 3</li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Site Ops</h5>
+      <h6 class="card-subtitle mb-2 text-muted">subtitle</h6>
+      <p class="card-text">Some quick desc text</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Metric 1</li>
+        <li class="list-group-item">Metric 2</li>
+        <li class="list-group-item">Metric 3</li>
+
+      </ul>
+    </div>
+  </div>
+
+ </div>
+ <div class="filter" id="filter">
+
+  <div class="dropdown" style="margin: 2px;">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Capacity Type
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">server ready</a></li>
+      <li><a class="dropdown-item" href="#">land ready</a></li>
+    </ul>
+  </div>
+  <div class="btn-group" style="margin: 2px;">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Server Type
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">AI</a></li>
+      <li><a class="dropdown-item" href="#">Non AI</a></li>
+    </ul>
+  </div>
+
+ </div>
+
+
+  <script>
+
+    //         const bounds = [
+    // [-74.04728, 40.68392], // [west, south]
+    // [-73.91058, 40.87764]  // [east, north]
+    // ];
+    // // Set the map's max bounds.
+    // map.setMaxBounds(bounds);
+  </script>
+  <script src="/bundle.js" />
 </body>
 
 </html>
